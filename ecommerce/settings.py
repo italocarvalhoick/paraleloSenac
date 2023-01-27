@@ -25,7 +25,7 @@ SECRET_KEY = '!vkzhd5$cv*=7&7po7kb46&!w!&^x)slaz^yyaol(*(0hg6^wm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['web-production-f003a.up.railway.app']
+ALLOWED_HOSTS = [ 'paralelo33pub.up.railway.app', 'web-production-f003a.up.railway.app', '127.0.0:1']
 
 
 # Application definition
