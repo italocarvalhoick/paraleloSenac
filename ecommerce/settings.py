@@ -133,3 +133,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 MEDIA_URL = '/image/'
 MEDIA_ROOT = BASE_DIR/'static/image'
 
+
+
+
+CSRF_TRUSTED_ORIGINS = ['https://web-production-f003a.up.railway.app', 'https://paralelo33pub.up.railway.app']
+
