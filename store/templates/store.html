@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{%load static %}
+<head>
+
+  <link rel ='stylesheet' href = "{% static 'css/style.css' %}">
+</head>
+
+
+
+{% block content %}
+
+
+<!--
+<div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+  <div class="container" style="margin:40px auto; width:852px;">
+  <div class="g_slide" id="slides">
+    <div class="switch_main">
+      <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-1.jpg' %}" width="850px" height="450px" /></a>
+      <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-2.jpg' %}" width="850px" height="450px" /></a>
+      <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-3.jpg' %}" width="850px" height="450px" /></a>
+    </div>
+  </div>
+</div>
+
+-->
+
+
+  
+
+
+
+
+
+
+<!-----------------------------------------------PRODUTOS---------------------------------------------->
+
+ <!-- ======= Hero Section ======= -->
+ <section id="hero" class="hero d-flex align-items-center section-bg">
+  <div class="container">
+    <div class="row justify-content-between gy-5">
+
+      <!--------------------             SLIDE BANNER PARTE AMARELA               ---------------------------->
+
+
+
+      <!-- CARROSSEL -->
+ <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators" style="bottom: 40px;">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 0"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 1"></button>
+   
+  </div>
+  <div class="carousel-inner">
+
+  {% for bannerproduct in banner %}
+
+    <div class="carousel-item active" data-bs-interval="5000" style="top: 37px;">
+      <img src="{{bannerproduct.image.url}}" style="width: auto; height: 500px; " class="d-block w-100" alt="..." >
+      <div class="carousel-caption d-none d-md-block">
+        <!--<h5 style="font-size: 40px; color: rgb(0, 140, 255); font-family: comic Sans MS;">{{bannerproduct.title}}</h5>-->
+       <!--<p>{{bannerproduct.description}}</p> --> 
+        <a href="{% url 'cart' %}" class="btn btn-primary addtocart" style="  border-color: rgb(205, 79, 79); background-color: rgb(251, 8, 8); position: relative; left: 5px;" data-action = "add" data-product = "{{bannerproduct.id}}" >😋Saborear Agora!</a>
+       
+      </div>
+    </div>
+  
+  {% endfor %}
+
+  </div>
+  <button class="carousel-control-prev" style="width: 4%;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next"  style="width: 4%;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+
+
+  <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+    <h3 data-aos="fade-up" style="font-size: 20px; color: rgb(0, 0, 0); font-family: comic Sans MS; margin-bottom: 5px;" >Semana P33 Promoção deciosa! </h3>
+    <!--
+    <p data-aos="fade-up" data-aos-delay="100">Carne bovina acebolada, frango, calabresa,<br> batata frita, molho rose, farofa e vinagrete.</p>
+    -->
+    <div class="d-flex" data-aos="fade-up" data-aos-delay="300" >
+      <a href="#menu" class="btn-book-a-table">Peça Agora!</a>
+
+
+      <!-- video 1 -->
+      <a href="https://instagram.fthe4-1.fna.fbcdn.net/o1/v/t16/f1/m17/CE458F428DCDCCF61279082D6D04FEAF_transcode_output_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uNTQyLnN0b3J5LmRlZmF1bHQifQ&_nc_ht=instagram.fthe4-1.fna.fbcdn.net&_nc_cat=108&vs=17911565974550481_356352493&_nc_vs=HBksFQIYWGlnX3N0b3JpZXNfcGVybWFuZW50X3Byb2QvQ0U0NThGNDI4RENEQ0NGNjEyNzkwODJENkQwNEZFQUZfdHJhbnNjb2RlX291dHB1dF9kYXNoaW5pdC5tcDQVAALIAQAVABgkR0FWVXh3Zm9LRGN6SmI4QUFKWnBLb3BUZS1JWmJwa3dBQUFGFQICyAEAKAAYABsBiAd1c2Vfb2lsATEVAAAmov%2F%2BmK2e0T8VAigCQzMsF0ApRBiTdLxqGBJkYXNoX2Jhc2VsaW5lXzJfdjERAHXoBwA%3D&_nc_rid=7af33b4a6f&ccb=9-4&oh=00_AfBxfKHCjSAawE4YOyS0lD6g4rEoLLa4DfyqikVsX02rRQ&oe=63C75E0E&_nc_sid=276363" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Assista Videos</span></a>
+    </div>
+    
+  </div>
+
+
+  </div>
+
+
+  <!-- END CARROSSEL -->
+
+
+
+
+     
+      
+      
+
+
+
+      
+
+      <!--------- Chamada Call Action-------
+      <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+        <img src="../static/image/chama.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+      </div>
+     !-----Fim Chamada Call Action--------->
+
+
+    </div>
+  </div>
+  
+</section><!-- End Hero Section -->
+
+
+
+ 
+
+
+
+
+<section id="menu" class="menu">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h2>Cardápio</h2>
+      <p>Nosso <span>Menu</span></p>
+    </div>
+
+
+
+
+    <!---produtos--->
+
+
+    <div class = 'container'>
+      <div class = 'row'>
+        {% for product in products %}
+          
+          <div class = 'col-md-4 col-lg-4'>
+            <div class="card" style="width: 18rem; background-color: rgb(43, 43, 43);">
+                <img src="{{product.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title" style=" position: relative; color: blanchedalmond;">{{product.name}}</h3>
+                  <h4 class="card-text" style=" position: relative; left: 75px; color: rgb(255, 237, 37);">R$  {{product.price}}</h4>
+                  <a  class="btn btn-primary addtocart" style="border-color: rgb(205, 79, 79); background-color: rgb(251, 8, 8); position: relative; left: 75px;" data-action = "add" data-product = "{{product.id}}">Adicionar</a>
+                </div>
+              </div>
+          </div>
+          {% endfor %}
+    
+          
+        
+    
+          
+    
+         
+    
+      </div>
+    </div>
+
+
+    <!-----Produtos-->
+
+
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+<section id="gallery" class="gallery section-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>Galeria</h2>
+      <p>Confira <span>Nossa Galeria</span></p>
+      <div class="g_slide1" id="slides1">
+        <div class="switch_main">
+          <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-1.jpg' %}" width="850px" height="450px" /></a>
+          <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-2.jpg' %}" width="850px" height="450px" /></a>
+          <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-3.jpg' %}" width="850px" height="450px" /></a>
+          <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-4.jpg' %}" width="850px" height="450px" /></a>
+          <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-5.jpg' %}" width="850px" height="450px" /></a>
+          <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-6.jpg' %}" width="850px" height="450px" /></a>
+          <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-7.jpg' %}" width="850px" height="450px" /></a>
+          <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-8.jpg' %}" width="850px" height="450px" /></a>
+         
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+</section><!-- End Gallery Section -->
+
+
+
+
+
+
+
+
+
+  <!-------------------------- Terceiro Slide----------->
+  <!--<div class="scroll" id="scroll_wrap">
+    <div class="scroll_in switch_main">
+      <a class="item" href="#"><img data-src="https://unsplash.it/250/117?image=111" /></a>
+      <a class="item" href="#"><img data-src="https://unsplash.it/250/117?image=121" /></a>
+      <a class="item" href="#"><img data-src="https://unsplash.it/250/117?image=211" /></a>
+      <a class="item" href="#"><img data-src="https://unsplash.it/250/117?image=311" /></a>
+      <a class="item" href="#"><img data-src="https://unsplash.it/250/117?image=411" /></a>
+    </div>
+  </div>-->
+  
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src = "../static/js/switchable.js"></script>
+ 
+  <script>
+  $(function(){
+    switchable({
+      $element: $('#slides')
+      ,interval: 2000
+      ,animateSpeed: 500
+      
+    });
+    switchable({
+      $element: $('#slides1')
+      ,interval: 2000
+      ,effect: 'fade'
+    });
+    switchable({
+      $element: $('#scroll_wrap')
+      ,interval: 2000
+      ,showNav: true
+      //,effect: 'fade'
+      ,type: 'imgScroll'
+      ,imgScroll: {
+        num: 2
+      }
+    });
+  });
+  </script>
+  </div>
+
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
+ <!-- Template Main JS File -->
+ <script src="../static/js/main.js"></script>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+{% endblock %}

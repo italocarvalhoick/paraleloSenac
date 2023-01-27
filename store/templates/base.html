@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralelo33 Pub</title>
+     <!-- Favicons -->
+    <link href="{% static '../static/image/iconlogo.png' %}" rel="icon">
+
+
+     <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel ='stylesheet' href = "{% static 'css/style.css' %}">
+    <script>
+
+      let user = "{{request.user}}"
+
+      function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    const csrftoken = getCookie('csrftoken');
+    </script>
+</head>
+
+
+<body>
+
+
+
+  <header id="header" class="header fixed-top d-flex align-items-center" style="margin-left: -160px;">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'store' %}" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1><img src="{% static '../static/image/logop33.png' %}" width="200px" height="50px"></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{% url 'store' %}">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Galeria</a></li>
+          <!--<li><a href="#events">Eventos</a></li> -->
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+
+       
+      </nav><!-- .navbar -->
+
+      <ul class="nav-item">
+        <a class="nav-link active" aria-current="page" href="" ><h4 style="color: rgb(19, 219, 142);">Olá, {{user}}</h4></a>
+      </ul>
+
+      <form class="d-flex">
+        <a href = "{% url 'cart' %}">
+          <div class ='cart_container' style="left: 90px;">
+          <img src = "{% static 'image/cart1.png' %}">
+          <div class = 'cart-item-count'><h4>{{cart.get_itemtotal}}</h4></div>
+      </div>
+    </a> 
+      </form>
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+      </nav>
+
+      {% block content %}
+      <h1>Bem Vindo!</h1>
+      {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src = "{% static 'js/cart.js' %}"></script>
+    
+    
+
+     <!-- ======= Footer ======= -->
+  <footer id="contact" class="footer">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Endereço</h4>
+            <p>
+              Teresina - PI <br>
+              Av. Valter Alencar, 720 - Monte Castelo<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Reserva</h4>
+            <p>
+              <strong>Telefone:</strong> +55 (86)99454-6128<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Horário de Funcionamento</h4>
+            <p>
+              Terça a Quinta 11h às 00h</br>  Sexta e Sáb 11h às 02h </br> Domingo 11h às 23h<br>
+              <strong>Segunda Fechado</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Siga-nos</h4>
+          <div class="social-links d-flex">
+            <a href="https://www.youtube.com/watch?v=sZtvbcHDPfY" class="youtube"><i class="bi bi-youtube"></i></a>
+            <a href="https://web.facebook.com/paralelo33pub/?_rdc=1&_rdr" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/paralelo33pub/" class="instagram"><i class="bi bi-instagram"></i></a>
+           <!---  whatsapp  https://whats.link/paralelo33pub --->
+            <a href="https://api.whatsapp.com/send?phone=5586994546128&text=" class="linkedin"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Paralelo33</span></strong>. Todos os Direitos Reservados
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ -->
+        Feito por <a href="https://bootstrapmade.com/">Alunos Senac</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+    
+
+</body>
+</html>
