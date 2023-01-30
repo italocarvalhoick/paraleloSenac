@@ -189,18 +189,14 @@
     <div class="section-header">
       <h2>Galeria</h2>
       <p>Confira <span>Nossa Galeria</span></p>
+
       <div class="g_slide1" id="slides1">
+  {% for Gallery in galeria %}
+      
         <div class="switch_main">
-          <a class="item switch_item" href="#"><img src="/staticfiles/image/gallery-1.jpg" width="850px" height="450px" /></a>
-          <a class="item switch_item" href="#"><img src="{% static '../staticfiles/image/gallery-2.jpg' %}" width="850px" height="450px" /></a>
-          <a class="item switch_item" href="#"><img src="{% static '../staticfiles/image/gallery-3.jpg' %}" width="850px" height="450px" /></a>
-          <a class="item switch_item" href="#"><img src="{% static '../staticfiles/image/gallery-4.jpg' %}" width="850px" height="450px" /></a>
-          <a class="item switch_item" href="#"><img src="{% static '../staticfiles/image/gallery-5.jpg' %}" width="850px" height="450px" /></a>
-          <a class="item switch_item" href="#"><img src="{% static '../staticfiles/image/gallery-6.jpg' %}" width="850px" height="450px" /></a>
-          <a class="item switch_item" href="#"><img src="{% static '../staticfiles/image/gallery-7.jpg' %}" width="850px" height="450px" /></a>
-          <a class="item switch_item" href="#"><img src="{% static '../staticfiles/image/gallery-8.jpg' %}" width="850px" height="450px" /></a>
-         
+          <a class="item switch_item" href="#"><img src="{{galeiria.image.url}}" width="850px" height="450px" /></a>         
         </div>
+  {% endfor %}
       </div>
     </div>
     
