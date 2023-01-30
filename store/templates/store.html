@@ -181,10 +181,12 @@
       <p>Confira <span>Nossa Galeria</span></p>
     </div>
       
-  {% for gallery in galeria %}
+  
       <div class="g_slide1" id="slides1">
         <div class="switch_main">
-          <a class="item switch_item" href="#"><img src="{{gallery.image.url}}" width="850px" height="450px" /></a>         
+          {% for gallery in galeria %}
+            <a class="item switch_item" href="#"><img src="{{gallery.image.url}}" width="850px" height="450px" /></a>         
+          {% endfor %}
         </div>
       </div>
 
@@ -192,7 +194,7 @@
     
 
 
-  {% endfor %}
+ 
       
     
 
