@@ -181,13 +181,16 @@
       <p>Confira <span>Nossa Galeria</span></p>
     </div>
   </div>
+
+
+  {% for galeriafoto in galeria %}
   <div class="container" style="margin:150px auto; width:752px;">
-      <div class="g_slide1" id="slides">
+      <div class="g_slide1" id="slides1">
         
         <div class="switch_main">
-          {% for galeriafoto in galeria %}
+          
           <a class="item switch_item" href="#"><img src="{{galeriafoto.image.url}}" width="850px" height="450px" /></a>    
-          {% endfor %}  
+           
         </div>
         
       </div>
@@ -223,7 +226,8 @@
   });
   </script>
   </div>
-
+ 
+  {% endfor %} 
   <script type="text/javascript">
   
     var _gaq = _gaq || [];
@@ -240,7 +244,7 @@
   </script>
     
 
-  </div>
+ 
 </section><!-- End Gallery Section -->
 
 
