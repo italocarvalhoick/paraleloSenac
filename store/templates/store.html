@@ -178,12 +178,14 @@
     <div class="section-header">
       <h2>Galeria</h2>
       <p>Confira <span>Nossa Galeria</span></p>
-      <div class="g_slide1" id="slides1">
-        {% for galeriafoto in galeria %}
+      <div class="g_slide1" id="slides">
+        
         <div class="switch_main">
-          <a class="item switch_item" href="#"><img src="{{galeriafoto.image.url}}" width="850px" height="450px" /></a>      
+          {% for galeriafoto in galeria %}
+          <a class="item switch_item" href="#"><img src="{{galeriafoto.image.url}}" width="850px" height="450px" /></a>    
+          {% endfor %}  
         </div>
-        {% endfor %}
+        
       </div>
     </div>
     
