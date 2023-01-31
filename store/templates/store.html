@@ -10,15 +10,6 @@
 
 
 
-{% for galeriafoto in galeria %}
-            <div class="switch_main">        
-                <a class="item switch_item" href="#"><img src="{{galeriafoto.image.url}}" width="850px" height="450px" /></a>                 
-            </div>
-
-            
-          {% endfor %}
-
-
          
 
 
@@ -189,7 +180,7 @@
       </div>
 </section><!-- End Gallery Section -->
 
-<div class="g_slide1" id="slides1"></div>
+<div class="g_slide1" id="slides1">
     {% for galeriafoto in galeria %}
       
         <div class="switch_main">        
