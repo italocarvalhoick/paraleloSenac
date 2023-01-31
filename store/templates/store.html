@@ -183,7 +183,13 @@
   </div>
 
 
-  {% for galeriafoto in galeria %}
+  
+ 
+</section><!-- End Gallery Section -->
+
+
+
+{% for galeriafoto in galeria %}
   <div class="container" style="margin:150px auto; width:752px;">
       <div class="g_slide1" id="slides1">
         
@@ -198,7 +204,7 @@
 
 
       <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src = "../static/js/switchable.js"></script>
+  <script src = "{% static 'js/switchable.js' %}"></script>
  
   <script>
   $(function(){
@@ -244,8 +250,6 @@
   </script>
     
     {% endfor %} 
- 
-</section><!-- End Gallery Section -->
 
 
   
