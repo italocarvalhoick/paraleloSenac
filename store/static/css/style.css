@@ -113,10 +113,10 @@
 
   .g_slide1 {
     position: relative;
-    width: 752px;
+    width: 850px;
     height: 450px;
     overflow: hidden;
-    left: 180px;
+    right: 95px;
     
   }
   
