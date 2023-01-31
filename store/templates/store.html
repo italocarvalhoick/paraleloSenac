@@ -184,13 +184,13 @@
 
   <div class="container" style="margin:150px auto; width:752px;">
     <div class="g_slide1" id="slides1">
-      {% for galeriafoto in galeria %}
+      
       <div class="switch_main">
-        
+        {% for galeriafoto in galeria %} 
         <a class="item switch_item" href="#"><img src="{{galeriafoto.image.url}}" width="850px" height="450px" /></a>    
-         
+        {% endfor %}
       </div>
-      {% endfor %}
+      
     </div>
   
 
