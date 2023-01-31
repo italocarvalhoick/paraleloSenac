@@ -10,6 +10,30 @@
 
 
 
+{% for galeriafoto in galeria %}
+            <div class="switch_main">        
+                <a class="item switch_item" href="#"><img src="{{galeriafoto.image.url}}" width="850px" height="450px" /></a>                 
+            </div>
+
+            
+          {% endfor %}
+
+
+          {% for galeriafoto in galeria %}
+            <div class="switch_main">        
+                <img src="{{galeriafoto.image.url}}">                 
+            </div>
+
+            
+          {% endfor %}
+
+
+          {% for galeriafoto in galeria %}
+                    
+                <a class="item switch_item" href="#"><img src="{{galeriafoto.image.url}}">
+
+            
+          {% endfor %}
 
 
 <!--
