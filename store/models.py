@@ -81,9 +81,10 @@ class BannerProduct(models.Model):
         return self.title
 
 
-class Gallery(models.Model):
-    name =  models.CharField(max_length=50)
+class GaleriaFoto(models.Model):
+    title = models.CharField(max_length=100)
     image = models.ImageField()
 
     def __str__(self):
-        return self.name
+        return self.title
+

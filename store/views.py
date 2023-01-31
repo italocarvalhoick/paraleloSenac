@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Cartitems, Customer, Product, Cart, BannerProduct, Gallery
+from .models import Cartitems, Customer, Product, Cart, BannerProduct, GaleriaFoto
 from django.http import JsonResponse
 import json
 
@@ -9,7 +9,7 @@ def store(request):
         customer = request.user.customer
         cart, created = Cart.objects.get_or_create(customer = customer, completed = False)
         cartitems = cart.cartitems_set.all()
-    galeria = Gallery.objects.all()   
+    galeria = GaleriaFoto.objects.all()   
     banner = BannerProduct.objects.all()
     products = Product.objects.all()
     return render(request, 'store.html', {'products': products, 'cart':cart, 'banner': banner, 'galeria': galeria})
