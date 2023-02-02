@@ -90,6 +90,6 @@ class GaleriaFoto(models.Model):
 
 
 class Product_search(models.Model):
-    name_of_product = models.CharField(max_length=100)
+    name_of_produto = models.CharField(max_length=100)
     def __str__(self):
-        return self.name_of_product
+        return self.name_of_produto

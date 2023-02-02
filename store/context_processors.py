@@ -2,8 +2,8 @@ from . models import Product
 from . forms import Product_search_form
 
 def product_links(request):
-    product = Product.objects.all()
-    return {'produto': product}
+    produto = Product.objects.all()
+    return {'produto': produto}
 
 def perfume_search(request):
     search_form = Product_search_form
