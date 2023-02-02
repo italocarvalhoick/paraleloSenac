@@ -7,4 +7,4 @@ class Product_search_form(forms.ModelForm):
     }))
     class Meta:
         model = Product_search
-        fields = ['name_of_perfume',]
+        fields = ['name_of_product',]
