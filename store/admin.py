@@ -1,7 +1,6 @@
 from django.contrib import admin
 from . models import *
 
-
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'price', 'image')
     
@@ -12,9 +11,6 @@ class ProductAdmin(admin.ModelAdmin):
     list_per_page = 10
 
     search_fields = ('name', 'price')
-
-
-
 # Register your models here.
 admin.site.register(Customer)
 admin.site.register(Product, ProductAdmin)
