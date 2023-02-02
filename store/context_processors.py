@@ -5,7 +5,7 @@ def product_links(request):
     produto = Product.objects.all()
     return {'produto': produto}
 
-def perfume_search(request):
+def produto_search(request):
     search_form = Product_search_form
     if request.method == 'POST':
         search_form = Product_search_form(request.POST)
