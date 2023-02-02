@@ -71,6 +71,19 @@
        
       </nav><!-- .navbar -->
 
+
+      <!--- BARRA DE PESQUISA -->
+
+      <form class="d-flex" role="search" method="POST" action="{% url 'search' %}">
+        <!-- <input class="form-control me-2" type="search" placeholder="Nome do perfume" aria-label="Search" style="border-radius: 30px;"> -->
+        {% csrf_token %}
+        {{search_form.name_of_perfume}}
+        <button class="btn btn-warning" type="submit" style="border-radius: 30px;">Pesquisar</button>
+      </form>
+
+      <!----   BARRA DE PESQUISA -->
+
+
       <ul class="nav-item">
         <a class="nav-link active" aria-current="page" href="" ><h4 style="color: rgb(19, 219, 142);">Olá, Visitante</h4></a>
        <!-- <a class="nav-link active" aria-current="page" href="" ><h4 style="color: rgb(19, 219, 142);">Olá, {{user}}</h4></a> 
