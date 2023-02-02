@@ -3,7 +3,7 @@ from . forms import Product_search_form
 
 def product_links(request):
     product = Product.objects.all()
-    return {'product': product}
+    return {'produto': product}
 
 def perfume_search(request):
     search_form = Product_search_form
