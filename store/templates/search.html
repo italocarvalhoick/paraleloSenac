@@ -4,113 +4,81 @@
 {% block content %}
   
 
-<div class="container text-center row row-cols-1">
-    <div class="row">
-        {% if search_produto %}
-        {%for product in search_produto %}
+<section id="menu" class="menu">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h2>Cardápio</h2>
+      <p>Nosso <span>Menu</span></p>
+      <!--- BARRA DE PESQUISA -->
 
-
-        <div class="container text-center" style="display: block;">
-            <div class="row">
-              <div class="col">
-                
-              </div>
-              <div class="col">
-                
-                <div class="card" style="width: 18rem;">
-                    <img src="{{product.image.url}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">{{product.name}}</h5>
-                      <p class="card-text">R${{product.price}}</p>
-                      <a class="btn btn-warning addtocart" data-action="add" data-product = "{{product.id}}" >Adicionar ao Carrinho</a>
-                    </div>
-                  </div>
-
-              </div>
-              <div class="col">
-                
-              </div>
-            </div>
-          </div>
+      <form class="d-flex" role="search" method="POST" action="{% url 'search' %}">
+        <!--<input class="form-control me-2" type="search" placeholder="Nome do produto" aria-label="Search" style="border-radius: 30px;">-->
+          {% csrf_token %}
+          {{search_form.name_of_produto}}
+          <button class="btn btn-warning" type="submit" style="border-radius: 30px;">Pesquisar</button>
+        </form>
+  
+        <!----   BARRA DE PESQUISA -->
+    </div>
 
 
 
 
+    <!---produtos--->
 
-          <section id="menu" class="menu">
-            <div class="container" data-aos="fade-up">
-              <div class="section-header">
-                <h2>Cardápio</h2>
-                <p>Nosso <span>Menu</span></p>
-                <!--- BARRA DE PESQUISA -->
-          
-                <form class="d-flex" role="search" method="POST" action="{% url 'search' %}">
-                  <!--<input class="form-control me-2" type="search" placeholder="Nome do produto" aria-label="Search" style="border-radius: 30px;">-->
-                    {% csrf_token %}
-                    {{search_form.name_of_produto}}
-                    <button class="btn btn-warning" type="submit" style="border-radius: 30px;">Pesquisar</button>
-                  </form>
-            
-                  <!----   BARRA DE PESQUISA -->
-              </div>
-          
-          
-          
-          
-              <!---produtos--->
-          
-          
-              <div class = 'container'>
-                <div class = 'row'>
-                  {% for product in products %}
-                    
-                    <div class = 'col-md-4 col-lg-4'>
-                      <div class="card" style="width: 18rem; background-color: rgb(43, 43, 43);">
-                          <img src="{{product.image.url}}" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h3 class="card-title" style=" position: relative; color: blanchedalmond;">{{product.name}}</h3>
-                            <h4 class="card-text" style=" position: relative; left: 75px; color: rgb(255, 237, 37);">R$  {{product.price}}</h4>
-                            <a  class="btn btn-primary addtocart" style="border-color: rgb(205, 79, 79); background-color: rgb(251, 8, 8); position: relative; left: 75px;" data-action = "add" data-product = "{{product.id}}">Adicionar</a>
-                          </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-              
-                    
+
+    <div class="container text-center row row-cols-1">
+      <div class="row">
+          {% if search_produto %}
+          {%for product in search_produto %}
+  
+  
+          <div class="container text-center" style="display: block;">
+              <div class="row">
+                <div class="col">
                   
-              
-                    
-              
-                   
-              
+                </div>
+                <div class="col">
+                  
+                  <div class="card" style="width: 18rem;">
+                      <img src="{{product.image.url}}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">{{product.name}}</h5>
+                        <p class="card-text">R${{product.price}}</p>
+                        <a class="btn btn-warning addtocart" data-action="add" data-product = "{{product.id}}" >Adicionar ao Carrinho</a>
+                      </div>
+                    </div>
+  
+                </div>
+                <div class="col">
+                  
                 </div>
               </div>
-          
-          
-              <!-----Produtos-->
-          
-          
-          
             </div>
-          
-          </section>
-          
-          
-          
-
-
-
-
-
-
-      {%endfor%}
-      {% else %}
-      <div class = 'row'>
-          <h3>Infelizmente não encontramos o que deseja! :( </h3>
+  
+  
+        {%endfor%}
+        {% else %}
+        <div class = 'row'>
+            <h3>Infelizmente não encontramos o que deseja! :( </h3>
+        </div>
+        {% endif %}
+  
       </div>
-      {% endif %}
-
     </div>
+  
+  {%endblock%}
+  
+  
+
+
+    <!-----Produtos-->
+
+
+
   </div>
 
-{%endblock%}
+</section>         
+
+
+
