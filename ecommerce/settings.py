@@ -64,7 +64,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'store.context_processors.product_links',
-                'store.context_processors.perfume_search',
+                'store.context_processors.produto_search',
             ],
         },
     },
