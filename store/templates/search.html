@@ -36,7 +36,7 @@
       {%for product in search_produto %}
       
       
-
+      <div class = 'col-md-4 col-lg-4'>
         <div class="card" style="width: 18rem; background-color: rgba(43, 43, 43, 0.02);">
             <img src="{{product.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -45,6 +45,7 @@
               <a  class="btn btn-primary addtocart" style="border-color: rgb(205, 79, 79); background-color: rgb(251, 8, 8); position: relative; left: 75px;" data-action = "add" data-product = "{{product.id}}">Adicionar</a>
             </div>
           </div>
+        </div>
       
   
         {%endfor%}
