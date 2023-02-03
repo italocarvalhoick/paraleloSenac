@@ -127,16 +127,7 @@
             </p>
 
 
-             <!--- BARRA DE PESQUISA -->
-
-      <form class="d-flex" role="search" method="POST" action="{% url 'search' %}">
-        <!--<input class="form-control me-2" type="search" placeholder="Nome do produto" aria-label="Search" style="border-radius: 30px;">-->
-          {% csrf_token %}
-          {{search_form.name_of_produto}}
-          <button class="btn btn-warning" type="submit" style="border-radius: 30px;">Pesquisar</button>
-        </form>
-  
-        <!----   BARRA DE PESQUISA -->
+             
           </div>
 
         </div>
