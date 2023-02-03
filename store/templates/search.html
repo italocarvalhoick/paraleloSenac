@@ -27,7 +27,7 @@
     <!---produtos--->
 
 
-    <div class="container text-center row row-cols-1">
+    <div class="container">
       <div class = 'row'>
       {% if search_produto %}
       {%for product in search_produto %}
@@ -37,7 +37,7 @@
                 
           </div>
       <div class = 'col-md-4 col-lg-4'>
-        
+
         <div class="card" style="width: 18rem; background-color: rgba(43, 43, 43, 0.02);">
             <img src="{{product.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -79,8 +79,8 @@
 
 <div class="container text-center row row-cols-1">
   <div class="row">
-      {% if search_produto %}
-      {%for product in search_produto %}
+      {porc if search_produto porc}
+      {porc for product in search_produto porc}
 
 
       <div class="container text-center" style="display: block;">
