@@ -61,4 +61,4 @@ def updateQuantity(request):
 
 def search(request):
     search_produto = Product.objects.filter(name__icontains = request.POST.get('name_of_produto'))
-    return render (request, 'search.html', {'search_product': search_produto})
+    return render (request, 'search.html', {'search_produto': search_produto})
