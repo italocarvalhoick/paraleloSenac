@@ -380,11 +380,9 @@
 body {
   font-family: var(--font-default);
   color: var(--color-default);
-  background-color: rgb(24, 23, 23);
+  background-color: rgba(255, 103, 1, 0.459);
   
-  background-image: url(../image/fundobody.jpg);
-  background-repeat: no-repeat;
-  background-size:cover;
+  
 
 }
 
