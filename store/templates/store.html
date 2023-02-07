@@ -13,25 +13,6 @@
 {% block content %}
 
 
-
-         
-
-
-<!--
-<div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-  <div class="container" style="margin:40px auto; width:852px;">
-  <div class="g_slide" id="slides">
-    <div class="switch_main">
-      <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-1.jpg' %}" width="850px" height="450px" /></a>
-      <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-2.jpg' %}" width="850px" height="450px" /></a>
-      <a class="item switch_item" href="#"><img src="{% static '../static/image/gallery-3.jpg' %}" width="850px" height="450px" /></a>
-    </div>
-  </div>
-</div>
-
--->
-
-
 <!-----------------------------------------------PRODUTOS---------------------------------------------->
 
  <!-- ======= Hero Section ======= -->
@@ -78,16 +59,19 @@
 
 
   <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-    <h3 data-aos="fade-up" style="font-size: 20px; color: rgb(0, 0, 0); font-family: comic Sans MS; margin-bottom: 5px;" >Semana P33 Promoção deciosa! </h3>
+    <br>
     <!--
     <p data-aos="fade-up" data-aos-delay="100">Carne bovina acebolada, frango, calabresa,<br> batata frita, molho rose, farofa e vinagrete.</p>
     -->
     <div class="d-flex" data-aos="fade-up" data-aos-delay="300" >
-      <a href="#menu" class="btn-book-a-table">Peça Agora!</a>
+      <a href="#menu" class="btn-book-a-table">Mais Opções!</a>
 
 
       <!-- video 1 -->
       <a href="https://instagram.fthe4-1.fna.fbcdn.net/o1/v/t16/f1/m17/CE458F428DCDCCF61279082D6D04FEAF_transcode_output_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uNTQyLnN0b3J5LmRlZmF1bHQifQ&_nc_ht=instagram.fthe4-1.fna.fbcdn.net&_nc_cat=108&vs=17911565974550481_356352493&_nc_vs=HBksFQIYWGlnX3N0b3JpZXNfcGVybWFuZW50X3Byb2QvQ0U0NThGNDI4RENEQ0NGNjEyNzkwODJENkQwNEZFQUZfdHJhbnNjb2RlX291dHB1dF9kYXNoaW5pdC5tcDQVAALIAQAVABgkR0FWVXh3Zm9LRGN6SmI4QUFKWnBLb3BUZS1JWmJwa3dBQUFGFQICyAEAKAAYABsBiAd1c2Vfb2lsATEVAAAmov%2F%2BmK2e0T8VAigCQzMsF0ApRBiTdLxqGBJkYXNoX2Jhc2VsaW5lXzJfdjERAHXoBwA%3D&_nc_rid=7af33b4a6f&ccb=9-4&oh=00_AfBxfKHCjSAawE4YOyS0lD6g4rEoLLa4DfyqikVsX02rRQ&oe=63C75E0E&_nc_sid=276363" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Assista Videos</span></a>
+      <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+      <a href="https://www.youtube.com/watch?v=lSv4iMNn_zM&ab_channel=SPLGAMES" class="glightbox play-btn"></a>
+    
     </div>
     
   </div>
@@ -98,13 +82,6 @@
 
   <!-- END CARROSSEL -->
       
-
-      <!--------- Chamada Call Action-------
-      <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-        <img src="../static/image/chama.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
-      </div>
-     !-----Fim Chamada Call Action--------->
-
 
     </div>
   </div>
@@ -149,7 +126,7 @@
             <div class="card" style="width: 12rem; background-color: rgba(43, 43, 43, 0.0596);">
                 <img src="{{product.image.url}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h3 class="card-title" style=" position: relative; color: blanchedalmond;">{{product.name}}</h3>
+                 
                   <h4 class="card-text" style=" font-size: 27px; position: relative; left: 18px; color: rgb(255, 255, 255);">R$  {{product.price}}</h4>
                   <a  class="btn btn-primary addtocart" style="border-color: rgb(205, 79, 79); background-color: rgb(251, 8, 8); position: relative; left: 15px; width: 130px; height: 40px; border-radius: 40px; border-color: aliceblue;" data-action = "add" data-product = "{{product.id}}">🛒Adicionar</a>
                 </div>
