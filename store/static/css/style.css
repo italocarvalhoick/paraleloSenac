@@ -382,6 +382,10 @@ body {
   color: var(--color-default);
   background-color: rgb(24, 23, 23);
   
+  background-image: url(../image/fundobody.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+
 }
 
 a {
