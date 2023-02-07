@@ -146,12 +146,12 @@
         {% for product in products %}
           
           <div class = 'col-md-4 col-lg-4'>
-            <div class="card" style="width: 18rem; background-color: rgba(43, 43, 43, 0.02);">
+            <div class="card" style="width: 12rem; background-color: rgba(43, 43, 43, 0.0596);">
                 <img src="{{product.image.url}}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h3 class="card-title" style=" position: relative; color: blanchedalmond;">{{product.name}}</h3>
-                  <h4 class="card-text" style=" position: relative; left: 75px; color: rgb(255, 237, 37);">R$  {{product.price}}</h4>
-                  <a  class="btn btn-primary addtocart" style="border-color: rgb(205, 79, 79); background-color: rgb(251, 8, 8); position: relative; left: 75px;" data-action = "add" data-product = "{{product.id}}">Adicionar</a>
+                  <h4 class="card-text" style=" font-size: 27px; position: relative; left: 18px; color: rgb(255, 255, 255);">R$  {{product.price}}</h4>
+                  <a  class="btn btn-primary addtocart" style="border-color: rgb(205, 79, 79); background-color: rgb(251, 8, 8); position: relative; left: 15px; width: 130px; height: 40px; border-radius: 40px; border-color: aliceblue;" data-action = "add" data-product = "{{product.id}}">🛒Adicionar</a>
                 </div>
               </div>
           </div>

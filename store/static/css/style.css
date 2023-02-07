@@ -28,7 +28,8 @@
     /* border: 3px solid black; */
 }
 .col-md-, .col-lg-4{
-    margin-bottom: 20px;
+  margin-bottom: 70px;
+  padding: 20px;
 }
 #cart_image{
     width: 50px;
