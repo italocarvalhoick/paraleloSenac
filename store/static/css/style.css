@@ -419,6 +419,11 @@ section {
   background-color:rgb(255 191 0 / 94%);
 }
 
+.section-gal{
+  background-color: #551b0663;
+}
+
+
 .section-header {
   text-align: center;
   padding-bottom: 30px;
