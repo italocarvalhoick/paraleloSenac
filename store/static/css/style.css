@@ -414,7 +414,7 @@ section {
 }
 /*-----------------------     Fundo Call to Action                     ----------*/
 .section-bg {
-  background-color:rgb(255 191 0 / 94%);
+  background-color:rgb(250, 194, 19);
 
 }
 
@@ -561,7 +561,7 @@ background-size:auto;
 # Header
 --------------------------------------------------------------*/
 .header {
-  background: rgb(24, 24, 24);
+  background: rgba(255, 106, 106, 0.322);
   transition: all 0.5s;
   z-index: 997;
   height: 60px;
