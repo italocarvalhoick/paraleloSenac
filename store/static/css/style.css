@@ -415,7 +415,17 @@ section {
 /*-----------------------     Fundo Call to Action                     ----------*/
 .section-bg {
   background-color:rgb(255 191 0 / 94%);
+
 }
+
+.section-bgm {
+ background-image: url(../image/fundobody.jpg);
+background-repeat: no-repeat;
+background-size:auto;
+
+}
+
+
 
 .section-gal{
   background-color: #551b0663;
