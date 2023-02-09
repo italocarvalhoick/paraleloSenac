@@ -429,7 +429,7 @@ background-size:auto;
 
 
 .section-gal{
-  background-color: rgba(0, 0, 0, 0.637);
+  background-color: rgba(0, 0, 0, 0.938);
 }
 
 
@@ -454,11 +454,11 @@ background-size:auto;
   font-size: 48px;
   font-weight: 400;
   font-family: var(--font-primary);
-  color: #f9e02d;
+  color: #f94c2d;
 }
 
 .section-header p span {
-  color: #f9e02d;
+  color:#f94c2d;
 }
 
 /*--------------------------------------------------------------
