@@ -454,11 +454,11 @@ background-size:auto;
   font-size: 48px;
   font-weight: 400;
   font-family: var(--font-primary);
-  color: var(--color-primary);
+  color: #f9e02d;
 }
 
 .section-header p span {
-  color: var(--color-primary);
+  color: #f9e02d;
 }
 
 /*--------------------------------------------------------------
