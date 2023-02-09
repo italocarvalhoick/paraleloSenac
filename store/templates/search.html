@@ -51,7 +51,10 @@
         {%endfor%}
         {% else %}
         <div class = 'row'>
-            <h3 style="color: rgb(187, 228, 64);">Infelizmente não encontramos o que deseja! 😕 </h3>
+            <h3 style="color: rgb(228, 111, 64);">Infelizmente não encontramos o que deseja! 😕 </h3>
+            <div class="d-flex" data-aos="fade-up" data-aos-delay="300" >
+              <a href="{% url 'store' %}" class="btn-book-a-table">Voltar!</a>
+            </div>
         </div>
         {% endif %}
   
