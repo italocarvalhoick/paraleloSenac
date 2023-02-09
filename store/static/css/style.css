@@ -417,10 +417,13 @@ section {
 }
 
 .section-bgm {
- background-image: url(../image/fundobody.jpg);
+background-color: rgba(0, 0, 0, 0.637);
+
+/*
+background-image: url(../image/fundobody.jpg);
 background-repeat: no-repeat;
 background-size:auto;
-
+*/
 }
 
 
