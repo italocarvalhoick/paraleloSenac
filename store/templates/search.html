@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 {%load static %}
   
-  <head>
+ 
+
+
+{% block content %}
+
+<head>
   <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
@@ -12,9 +17,6 @@
     <link rel ='stylesheet' href = "css/style.css">
     <link rel ='stylesheet' href = "{% static 'css/style.css' %}">
   </head>
-
-
-{% block content %}
   
 
 
@@ -22,7 +24,7 @@
 <section id="menu" class="menu">
   <div class="container" data-aos="fade-up">
     <div class="section-header">
-      <h2>Cardápio</h2>
+      <br>
       <p>Nosso <span>Menu</span></p>
       <!--- BARRA DE PESQUISA -->
 
@@ -104,7 +106,14 @@
 
   </div>
 
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  
+
+
+</section>         
+
+
+
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'vendor/aos/aos.js' %}"></script>
   <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
   <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
@@ -113,10 +122,6 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
-
-
-</section>         
-
 
 <!--
 
