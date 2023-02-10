@@ -19,7 +19,12 @@
             <td></td>
             <td ><h3><strong> 💲💲 Total: R$ {{cart.get_cart_total|floatformat:2}}</strong></h3></td>
             <!-- <td></td> -->
-            <td> <div id="paypal-button-container"></div>
+            <td>
+              <!----- <div id="paypal-button-container"></div>
+----->
+<img src="../static/image/paypal.png" style="position: absolute; width: 110px; height: 40px; top: 170px; right: 400px;">
+<img src="../static/image/cartoespaypal.png" style="position: absolute; width: 110px; height: 40px; top: 220px; right: 400px;">
+<div id="paypal-button-container" style="opacity: 0%; position: relative; right: 10px;"></div>
 
               <!-- Include the PayPal JavaScript SDK -->
               <script src="https://www.paypal.com/sdk/js?client-id=ATzQhRGwSXoKiOHUy-RHgKM0vFeXzuCHnjtNW4xZfJitGt0QnR8JoP00M5k91R0ddtxTpjgqly_HGmB6&currency=BRL"></script>
