@@ -104,6 +104,43 @@
 }
 
 
+/*  --------------------------------------------------------   botao     ------------------------------------------------------------  */
+
+.btn{
+  background: red;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  border-radius:20px;
+  right: 350px;
+ position: absolute;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+
+}
+
+.flash{
+  animation-name: flash;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+  0%{
+    background: red;  
+    padding: 15px 20px;  
+  }
+  50%{
+    background: rgb(131, 37, 37);
+    padding: 25px 28px;
+  }
+  100%{
+    background: red;
+    padding: 18px 22px;  
+  }
+}
+
+
 
 /*  --------------------------------------------------------   Slides     ------------------------------------------------------------  */
 
